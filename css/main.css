@@ -28,4 +28,7 @@ body {
 	#tagline {
 		text-align: center;
 	}
+	body {
+		font-size: 20px;
+	}
 }
