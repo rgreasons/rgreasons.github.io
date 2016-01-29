@@ -1,1 +1,4 @@
-{{I think this is how titles work}}
+---
+layout: post
+title: Sample title
+---
