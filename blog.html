@@ -4,4 +4,7 @@ title: SampleBlogPage
 permalink: /blog
 ---
 
+{% for posts in site.posts %}
+  {{post.title}}
+{% endfor %}
 <h2>Some Sample blog content.</h2>
