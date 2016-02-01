@@ -3,8 +3,9 @@ layout: blog
 title: SampleBlogPage
 permalink: /blog/
 ---
-
-{% for posts in site.posts %}
-  {{post.title}}
-{% endfor %} 
+<ul class="posts">
+  {% for posts in site.posts %}
+    {{post.title}}
+  {% endfor %} 
+</ul>
 <h2>Some Sample blog content.</h2>
