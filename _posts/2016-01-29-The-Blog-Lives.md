@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: post
 title: The Blog Lives!
 ---
 So after a lot of tinkering, I finally have a blog.
