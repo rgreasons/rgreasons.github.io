@@ -4,9 +4,7 @@ layout: post
 tags: Jekyll
 ---
 
-As I work on getting the new Jekyll site up and running, one of my primary concerns is tagging.  If I want to cover a wide variety of topics and do so for an expended period of time, I really need to organize everything to make it easy to consume years down the road.
-
-<!--excerpt-->
+As I work on getting the new Jekyll site up and running, one of my primary concerns is tagging. <!--excerpt--> If I want to cover a wide variety of topics and do so for an expended period of time, I really need to organize everything to make it easy to consume years down the road.
 
 Most dynamic CMS packages have tagging set up out of the box. Jekyll "supports" tag functionality, but because it requires the user to do all the heavy lifting, it's up to me to *implement* the tags.
 
