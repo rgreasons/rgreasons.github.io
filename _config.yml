@@ -12,4 +12,5 @@ author:
 
 excerpt_separator: "<!--excerpt-->"
 
-gems: jekyll-paginate
+gems:
+  - jekyll-paginate
