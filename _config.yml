@@ -1,2 +1,15 @@
+# Setup
+title:               RGReasons.net
+tagline:             Richard Reasons
+url:                 "http://rgreasons.github.io"
+paginate:            5
+
+# About/contact
+author:
+  name:              Richard Reasons
+  url:               http://www.rgreasons.net
+  email:             rgreasons@gmail.com
+
 excerpt_separator: "<!--excerpt-->"
-paginate: 5
+
+gems: jekyll-paginate
