@@ -50,11 +50,12 @@
     	</div>
 		</div>
 		<div class="col-md-3 col-md-offset-1">
+			Tags
 			{% for tag in site.tags %}
   				{% assign t = tag | first %}
   				{% assign posts = tag | last %}
 
-				{{ t | downcase }}
+				<a class="btn btn-default" href="/blog/tags#{{t | downcase}}">{{ t }}</a>
 				<ul>
 				{% for post in posts %}
   					{% if post.tags contains t %}
