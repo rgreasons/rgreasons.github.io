@@ -52,9 +52,13 @@
     		</div>
 	</div>
 		<div class="col-md-3 col-md-offset-1">
-			<a class="btn btn-default" href="tag1">Tag1</a>
-			<a class="btn btn-default" href="tag2">Tag2</a>
-			<a class="btn btn-default" href="anotherSampleTag">AnotherSampleTag</a>
+			Tags<br>
+			{% for tag in site.tags %}
+  				{% assign t = tag | first %}
+  				{% assign posts = tag | last %}
+
+				<a class="btn btn-default" href="/blog/tags#{{t | downcase}}">{{ t }}</a>
+			{% endfor %}
 		</div>
   </div>
 
