@@ -1,22 +1,20 @@
 ---
 layout: post
-title: Feeling Like Pablo: How Kanye's Album Rollout is Making Me Blue
+title: Feeling Like Pablo: How Kanye's Making Me Blue
 tags: music,Kanye
 ---
 
-As a fan of both creating and consuming music, I love getting a behind-the-scenes look at artists' creative processes.  making-of documentaries, oral histories, musical gear discussions, pictures from the studio - I eat it all up.  Following the developments of Kanye West albums has been no exception. 
+I started writing this post on Thursday as I was nearing what I thought was the release date and time of Kanye West's seventh album. I had been concerned for a few weeks that all of the press surrounding the album indicated it was going to be unfinished, or uncharacteristically imperfect.  Even though I still have yet to listen to the album, the way in which the rollout actually manifested between Thursday and today has me even more concered than I was last week.
 <!--excerpt-->
-After his third album *Graduation* sold nearly a million copies of his third album its first week, Kanye's profile grew so great that music journalists begin tracking his every move.  Stories of Rick Ross and Rihanna and the dude from Bon Iver just hiding out in Hawaii with Ye recording upped the stakes of his next album.  He lived up to the expectations when he started releasing tracks as part of his "Good Fridays" series, giving fans B-sides and early mixes of album cuts. The wave of hype hit me hard and I was totally hooked by the time *My Beautiful Dark Twisted Fantasy* was finally released.
+Paying attention to the album creation and release process has always intrigued me, both as a fan and a musician.  Kanye's albums have always been especially interesting because of where he sits in pop culture: a huge celebrity, a musical innovator, an uncompormising control freak. Posh recording sessions in Hawaii with every imaginable pop star, biometrically sealed briefcases of master tapes, and 11th hour vocal tracks have become part of the mythology of his recent albums.
 
-He followed it up with a collaboration with Jay-Z, *Watch the Throne*, that was notable for being an industry oddity: it didn't leak.  Fans were given singles, but the record label took outstanding measures at the CD pressing plants (extra security for workers, last-minute pressings, biometrically-sealed suitcases of the master tapes) to make sure details didn't leak out.  It was fun to actually be kept on my toes for new information.
+The rollout for his most recent album, 2013's *Yeezus*, was highly irregular for its time - radio silence until he went into an all-out media blitz in the month leading up to the album's release.  It was disconcerting to hear he was still putting the finishing touches on the album as he was releasing the lead single and shipping out the master files. It was annoying that he took big, scary stand against the music industry by refusing to allow pre-orders of the album.  But after stunts like Beyonce and Drake's digital-only out-of-nowhere releases, the *Yeezus* release just feels like a product of trying to strike a balance between creative control and fitting into the industry landscape.
 
-The press scrutiny was present once again in the time leading up to his 2013 album *Yeezus.* We knew he was in Paris.  We knew there was a revolving door of producers. He lifted his self-imposed press embargo in May to project the first single onto buildings around the country - all the while still putting finishing touches on at the 11th hour and 58th minute.  All of the reports from his circle suggested the same thing: it's been gestating for a long time and he kicked it into high gear for a few months to get it out the door.
+I initially thought *The Life of Pablo* was going to be cut from a similar cloth, but Kanye has thrown the industry to the wind- and with it, pretty much any respect for the album as a product and finished piece of work.
 
-As thrilling as it was to have a torrent of information about Kanye's angry new protest record, it was confusing that he protested against *everything.* His anti-consumerist stance made it difficult for consumers to throw their money at him - The album wasn't available for pre-order. 
+As much as I loved Ye's transparency leading up to *TLOP*'s release, I was worried.  Multiple publicized tracklist changes and name changes suggested we'd be getting another last-minute release, cemented by the lack any mention of a physical release.
 
-Although I still stand by stance that it's a decent album, I can't help but shake the feeling that Kanye's 0-to-100 attitude made it a rush job. All signs point to his newest record, *The Life of Pablo,* being cut from a similar cloth.
-
-The lead up to *TLOP* has been very similar to that of *Yeezus*. We've known he's been working and that an early 2016 release was expected, following album name declarations and one-off single "All Day."  In late January he went on his typical press blaze, releasing track "Real Friends," delcaring and February release, and changing the album's name for the third (or fourth?) time. The release went further off the hinges as the release date neared.
+ --
 
 Whereas with *Yeezus* the public had suspicions of the noise behind the scenes, this time around Kanye pulled back the curtain and let the public see him warp his plans at the last minute.  He gave a release date of February 11th and shared lots of evidence he was still in the studio - even tweeting about still working on the album art a day before the album's release.  At the livestreamed release event, he just played the tracks off of his laptop and tweeted after the show he was just now going to get the album mastered.  He announced *another* new tracklist after the time fans expected to have the album in their hands.
 
