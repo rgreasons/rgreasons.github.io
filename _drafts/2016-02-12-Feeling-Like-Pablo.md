@@ -12,7 +12,15 @@ The rollout for his most recent album, 2013's *Yeezus*, was highly irregular for
 
 I initially thought *The Life of Pablo* was going to be cut from a similar cloth, but Kanye has thrown the industry to the wind- and with it, pretty much any respect for the album as a product and finished piece of work.
 
-As much as I loved Ye's transparency leading up to *TLOP*'s release, I was worried.  Multiple publicized tracklist changes and name changes suggested we'd be getting another last-minute release, cemented by the lack any mention of a physical release.
+As much as I loved Ye's transparency leading up to *TLOP*'s release, I was worried.  Multiple publicized tracklist changes and name changes suggested we'd be getting another last-minute release, cemented by the lack any mention of a physical release. 
+
+The album was officially "launched" with a Madison Square Garden event to celebrate the debut of his most recent season of his Adidas clothing line.  I withheld judgement on music I only listened to as a 240p livestream, but had to once again check my expectations of ever hearing it at a reasonable bitrate when he tweeted another tracklist change and some additional recording after the event ended.
+
+By the time he *actually* released the album some 48 hours later following an SNL performance, I was ready to get off of the emotional rollercoaster. I was no longer excited for one of my most anticipated albums of the year because the artist refused to step back for 48 hours and let his album be an album. I've heard critics remark how it's exciting to know that this album is a picture of an artist *right now* - not last week or a few months ago, but about 15-20 minutes ago.  That's fine if he's ready to step away and let the art stand for itself, but we're talking about a guy who [is still talking about changing the final product after he's released it](https://twitter.com/kanyewest/status/698971890581401600).
+
+Even though this is really just one long complaint about my inability to get my grubby mitts on a compact disc of a music release, I think it's germane to Kanye as a historic artist. Kanye does not try to hide his concern for his legacy and contributions to society, so is it not fair to take a 100-mile view of how he's probably thinking about all of this? I think the series of stunts leading up to *The Life of Pablo* went beyond some crazy rogue marketing and pushing the limits of the music industry and into actively undermining his art. Kanye should take a page from his heroes and from his own past: if an idea is really going to turn the world on its head, the world will wait the extra 48 hours to get the best version of it.
+
+
 
  --
 
