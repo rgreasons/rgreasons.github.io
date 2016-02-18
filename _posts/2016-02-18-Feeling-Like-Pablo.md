@@ -1,5 +1,5 @@
 ---
-title: Feeling Like Pablo: How Kanye's Making Me Blue
+title: Feeling Like Pablo- How Kanye's Making Me Blue
 layout: post
 tags: Kanye,music
 ---
