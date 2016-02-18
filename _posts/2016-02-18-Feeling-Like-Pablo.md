@@ -1,7 +1,7 @@
 ---
 title: Feeling Like Pablo- How Kanye's Making Me Blue
 layout: post
-tags: Kanye, music
+tags: Kanye music
 ---
 
 I started writing this post on Thursday as I was nearing what I thought was the release date and time of Kanye West's seventh album. I had been concerned for a few weeks that all of the press surrounding the album indicated it was going to be unfinished, or uncharacteristically imperfect.  Even though I still have yet to listen to the album, the way in which the rollout actually manifested between Thursday and today has me even more concered than I was last week.
