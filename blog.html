@@ -8,8 +8,8 @@ permalink: /blog/
 
 	  {% for post in site.posts %}
 	  <div>
-	  	<h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br>
-	  	{{ post.date | date_to_string }}</h3>
+	  	<h3><a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a><br></h3>
+	  	<div style="font-size:18px;">{{ post.date | date_to_string }}</div>
 	  	<p>{{post.excerpt}}</p>
 	  </div>
 	  {% endfor %}
