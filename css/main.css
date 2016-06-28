@@ -24,6 +24,10 @@ body {
 	text-align: left;
 }
 
+.btnMargin {
+	margin: 1px;
+}
+
 @media (max-width: 61.9em) {
 	#tagline {
 		text-align: center;
