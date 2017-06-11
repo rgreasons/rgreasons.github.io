@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Spotify Playlist</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    </head>
+    <body>
+        <table class='table table-striped'>
+            <thead>
+                <th>Song Name</th>
+                <th>Artist</th>
+                <th>Date Added</th>
+                <th>Added By</th>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </body>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+    <script>
+        columns = ['songname', 'artist','date_added','added_by']
+        song_list =
+        d3.json('song_list 11-jun.json', function(error, data) {
+            var tbody = d3.select('tbody')
+            var rows = tbody.selectAll('tr')
+                            .data(data)
+                            .enter()
+                            .append('tr')
+
+            var cells = rows.selectAll('td')
+                        .data(function (row) {
+                            a = columns.map(function (column) {
+                                val = row[column]
+                                if (column === 'date_added') {
+                                    val = new Date(Date.parse(val))
+                                }
+                                return {column: column, value: val, url: row['url']}
+                            })
+                            return a
+                        })
+                        .enter()
+                        .append('td')
+                        .text(function (d) {
+                            // if (d.column === 'songname') {
+                            //     this.selectAll('a')
+                            //     .data(d)
+                            //     .enter()
+                            //     .append('a')
+                            //     .attr('href','http://google.com')
+                            //     .text(function(d) {
+                            //         return d.value
+                            //     })
+                            // }
+                            return d.value})
+                        .attr('class', function (d) {
+                            return d.column
+                        })
+                        .each(function (d) {
+                            console.log(d)
+                            if (d.column === 'songname') {
+                                d3.select(this)
+                                .text('')
+                                .append('a')
+                                .attr('href', d.url)
+                                .text(d.value)
+                            }
+                        })
+                        // .append('a')
+                        // .attr('href',function(d) {
+                        //     return d.url
+                        // })
+
+                        // .each(function(d) {
+                        //     if (d.column === 'songname') {
+                        //          songtd = d3.select(this.parentNode).select('songname')
+                        //          console.log(songtd.innerHTML)
+                        //     }
+                        // })
+        })
+    </script>
+</html>
