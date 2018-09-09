@@ -6,6 +6,8 @@ tags: music pitchfork python scraping
 
 Two years ago I took a [first stab at scraping Pitchfork reviews](http://www.rgreasons.net/2016/06/25/Scraping.html). Shortly afterward, I flung myself into a new position as pitchfork kept posting new reviews. I knew that at some point I wanted to revisit the data to attempt to try out some new ideas, but I also never got over the fragility of my initial implementaion.
 
+<!--excerpt-->
+
 As I referenced in my original blog post, the folks over at NPR had a pretty cool "just robust enough" [solution for web scraping](http://blog.apps.npr.org/2016/06/17/scraping-tips.html). They used the [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/) library just as I did, but their scraper design was more pythonic and they used some additonal tools to scale out the scraping. I used their methodology as a jumping-off point for my refactor. 
 
 When I sat down this week to update my implementation, I made a point to hit on three big things:
