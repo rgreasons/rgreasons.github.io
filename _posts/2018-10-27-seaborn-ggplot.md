@@ -4,7 +4,9 @@ title: Serviceable Plotting in Seaborn and ggplot2
 tags: python r
 ---
 
-The idea for this blog post has been germinating since I finished [my previous post](http://www.rgreasons.net/2018/09/22/pitchfork-corpus.html). I knew I wanted to compare and contrast my experiences with various plotting methodologies in R and Python, but I felt there just wasn't enough meat on the bone. It all comes down to a single takeaway: **It's much easier to create presentable plots using R and ggplot2 than any method I've attempted in any other language or library.**
+The idea for this blog post has been germinating since I finished [my previous post](http://www.rgreasons.net/2018/09/22/pitchfork-corpus.html). I knew I wanted to compare and contrast my experiences with various plotting methodologies in R and Python, but I felt there just wasn't enough meat on the bone. It all comes down to a single takeaway: It's much easier to create presentable plots using R and ggplot2 than any method I've attempted in any other language or library.
+
+<!--excerpt-->
 
 When drafting the aforementioned post, I wanted to complete it, top to bottom, in Python. I use ggplot2 daily at work, so I wanted to flex my Python muscles and see how the language and libraries had changed in the past year. For better or worse, they seem pretty much the same. That isn't to say they're bad; I just think they less approachable and have steeper learning curves.
 
