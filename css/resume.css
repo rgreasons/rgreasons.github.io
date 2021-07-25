@@ -41,11 +41,6 @@ ul {
     grid-row: header / summary-of-quals;
   }
   
-  .summary-of-quals {
-    grid-column: main-column / right-gutter;
-    grid-row: summary-of-quals / experience;
-  }
-  
   .experience {
     grid-column: main-column / right-gutter;
     grid-row: experience / humana;
