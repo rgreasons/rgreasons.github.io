@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Clusetering and Comparing NBA Players by Defensive Impact</title>
 
 		<link rel="stylesheet" href="dist/reset.css">
 		<link rel="stylesheet" href="dist/reveal.css">
@@ -15,6 +15,13 @@
 		<style>
 			tr {font-size: 28px}
 			td {font-size: 28px}
+			.titles {
+				margin: 100px;
+			}
+			.images {
+				height: auto;
+				width: 60%;
+			}
 		</style>
 	</head>
 	<body>
@@ -33,18 +40,20 @@
 						</ul>
 					</section>
 					<section>
-						Individual player tracking rolled out in 2014<br>
-						Enabled data collection too granular for manual collection
+						<ul>
+							<li>Individual player tracking rolled out in 2014</li>
+							<li>Enabled data collection too granular for manual collection</li>
+						</ul>
 					</section>
 					<section>
 						Common to break down offensive effectiveness
 						<br>
-						<img src="/img/nba_shotchart.png" alt="Screenshot of a shot chart from the official NBA website">
+						<img class = "images" src="/img/nba_shotchart.png" alt="Screenshot of a shot chart from the official NBA website">
 					</section>
 					<section>
 						Analytics projects to compare Players
 						<br>
-						<img src="/img/nba_carmelo.png" alt="Screenshot of FiveThirtyEight's CARMELO player comparison tool">
+						<img class = "images" src="/img/nba_carmelo.png" alt="Screenshot of FiveThirtyEight's CARMELO player comparison tool">
 					</section>
 					<section>
 						Wanted to compare played based on their <i>defensive</i> similarities
@@ -58,7 +67,7 @@
 					<section>
 						Use official <a href="https://stats.nba.com">NBA Stats website</a>, which is powered by REST APIs
 						<br>
-						<img src="/img/nba_boxout.png" alt="Screenshot of the box out statistics on the NBA's website">
+						<img class = 'images' src="/img/nba_boxout.png" alt="Screenshot of the box out statistics on the NBA's website">
 					</section>
 					<section>
 						Use browser developer tools to discover REST endpoints
@@ -120,7 +129,7 @@
 						Third Step: Clustering & Visualization
 					</section>
 					<section>
-						Agglomerative Clustering ("bottom up" hierarchical clustering)
+						Agglomerative Clustering ("bottom up" hierarchical clustering)<br>
 						4 clusters to try and approximate "4 quadrant" approach
 					</section>
 					<section>
