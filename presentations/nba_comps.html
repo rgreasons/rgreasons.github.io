@@ -1,0 +1,216 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>reveal.js</title>
+
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/white.css">
+
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<style>
+			tr {font-size: 28px}
+			td {font-size: 28px}
+		</style>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section>
+					<h3>Clustering and Comparing NBA Players by Defensive Impact</h3>
+					<b>Richard Reasons</b>
+				</section>
+				<!-- Basketball Stats vertical stack -->
+				<section>
+					<section>
+						<ul>
+							<li>Basketball, like all major sports, experienced an analytics and advanced statistics boom in the 2010s.</li>
+							<li>Transition from "counting stats" (Points, Rebounds, Assists) to advanced metrics (PER, VORP)</li>
+						</ul>
+					</section>
+					<section>
+						Individual player tracking rolled out in 2014<br>
+						Enabled data collection too granular for manual collection
+					</section>
+					<section>
+						Common to break down offensive effectiveness
+						# insert shot chart from NBA.com
+					</section>
+					<section>
+						Analytics projects to compare Players
+						# insert screenshot of CARMELO
+					</section>
+					<section>
+						Wanted to compare played based on their <i>defensive</i> similarities
+					</section>
+				</section>
+				<!-- Data scraping vertical stack -->
+				<section>
+					<section>
+						First Step: Compile the Data
+					</section>
+					<section>
+						Use official <a href="https://stats.nba.com">NBA Stats website</a>, which is powered by REST APIs
+						# Insert box out screenshot
+					</section>
+					<section>
+						Use browser developer tools to discover REST endpoints
+						# insert devtools screenshot
+					</section>
+					<section>
+						<ul>
+							<li>Seven endpoints</li>
+							<li>Filter to single day for single game performances</li>
+							<li>collate and merge for Individual player game performances</li>
+							<li>~25k records with 150+ columns per season</li>
+						</ul>
+					</section>
+				</section>
+				<!-- Data cleaning vertical stack -->
+				<section>
+					<section>
+						Second Step: Data Cleanup & Feature Engineering
+					</section>
+					<section>Flatten multiple seasons to single datapoint</section>
+					<section>
+						<ul>
+							<li>Percentage Calculations</li>
+							<li>Aggregate Totals</li>
+						</ul>
+					</section>
+					<section>
+						Add Aggregate Player & Game Information
+						<ul>
+							<li>Games Played</li>
+							<li>Wins / Losses</li>
+							<li>Plus-Minus</li>
+						</ul>
+					</section>
+					<section>
+						Principal Component Analysis (PCA)
+						<ul>
+							<li>Scale Data</li>
+							<li>PCA w/ 50 components</li>
+						</ul>
+					</section>
+					<section>
+						Signifcant correlation with playtime<br>
+						First Principal component accounted for 53% of dataset variance
+					</section>
+					<section>
+						Playtime Normalization
+						<ul>
+							<li>Second normalized dataset</li>
+							<li>Use standard "Per 36 Minutes" adjustment</li>
+							<li>Reduced inpact of first principal component from 53% to 11%</li>
+						</ul>
+					</section>
+				</section>
+				<!-- T-SNE & Clustering Stack -->
+				<section>
+					<section>
+						Third Step: Clustering & Visualization
+					</section>
+					<section>
+						Agglomerative Clustering ("bottom up" hierarchical clustering)
+						4 clusters to try and approximate "4 quadrant" approach
+					</section>
+					<section>
+						t-SNE
+						<ul>
+							<li> Dimensionality reduction algorithm useful for data visualization </li>
+							<li> Stochastic (non-deterministic), so not appropriate for use within models </li>
+						</ul>
+					</section>
+					<section>
+						t-SNE on Principal Components of NBA defensive statistics
+						# insert t-SNE image
+					</section>
+					<section>
+						K Nearest Neighbors
+						<ul>
+							<li>Performed on playtime normalized principal components</li>
+							<li>Excludes previous algorithm outputs</li>
+						</ul>
+					</section>
+				</section>
+				<!-- player comps -->
+				<section>
+					<Section>
+						Sample Comparisons
+					</Section>
+					<section>
+						<p>Lebron James</p>
+						<table>
+							<tr><th>Player Name</th><th>Player Cluster</th><th>Rank</th><th>Neighbor Player Name</th><th>% Match</th></tr>
+							<tr><td>LeBron James</td><td>3</td>	<td>1</td><td>Tobias Harris</td><td>0.986453</td></tr>
+							<tr><td>LeBron James</td><td>3</td>	<td>2</td><td>PJ Tucker</td><td>0.982009</td></tr>
+							<tr><td>LeBron James</td><td>3</td>	<td>3</td><td>Jae Crowder</td><td>0.980892</td></tr>
+							<tr><td>LeBron James</td><td>3</td>	<td>4</td><td>Khris Middleton</td><td>0.978541</td></tr>
+						</table>
+					</section>
+					<section>
+						<p>Rudy Gobert</p>
+						<table>
+							<thead>
+								<tr><th>Player Name</th><th>Player Cluster</th><th>Rank</th><th>Neighbor Player Name</th><th>% Match</th></tr>
+							</thead>
+							<tbody>
+								<tr> <td>Rudy Gobert</td> <td>3</td> <td>1</td> <td>Jonas Valanciunas</td> <td>0.959139</td> </tr>
+								<tr> <td>Rudy Gobert</td> <td>3</td> <td>2</td> <td>Dwight Howard</td> <td>0.957870</td> </tr>
+								<tr> <td>Rudy Gobert</td> <td>3</td> <td>3</td> <td>Hassan Whiteside</td> <td>0.955600</td> </tr>
+								<tr> <td>Rudy Gobert</td> <td>3</td> <td>4</td> <td>Bismack Biyombo</td> <td>0.953582</td> </tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<p>Vincent Poirier</p>
+						<table>
+							<thead>
+								<tr><th>Player Name</th><th>Player Cluster</th><th>Rank</th><th>Neighbor Player Name</th><th>% Match</th></tr>
+							</thead>
+							<tbody>
+								<tr> <td>Vincent Poirier</td> <td>0</td> <td>1</td> <td>Mo Bamba</td> <td>0.873041</td> </tr>
+								<tr> <td>Vincent Poirier</td> <td>0</td> <td>2</td> <td>Isaiah Hartenstein</td> <td>0.871039</td> </tr>
+								<tr> <td>Vincent Poirier</td> <td>0</td> <td>3</td> <td>Naz Reid</td> <td>0.865646</td> </tr>
+								<tr> <td>Vincent Poirier</td> <td>0</td> <td>4</td> <td>Anzejs Pasecniks</td> <td>0.86248</td> </tr>
+							</tbody>
+						</table>
+					</section>
+					<section>
+						<p>Mo Bamba</p>
+						<table>
+							<thead> <tr><th>Player Name</th><th>Player Cluster</th><th>Rank</th><th>Neighbor Player Name</th><th>% Match</th></tr> </thead>
+							<tbody>
+								<tr> <td>Mo Bamba</td> <td>0</td> <td>1</td> <td>Ivica Zubac</td> <td>0.951529</td> </tr>
+								<tr> <td>Mo Bamba</td> <td>0</td> <td>2</td> <td>Mitchell Robinson</td> <td>0.951293</td> </tr>
+								<tr> <td>Mo Bamba</td> <td>0</td> <td>3</td> <td>Jakob Poeltl</td> <td>0.933874</td> </tr>
+								<tr> <td>Mo Bamba</td> <td>0</td> <td>4</td> <td>JaVale McGee</td> <td>0.933155</td> </tr>
+							</tbody>
+						</table>
+					</section>
+				</section>
+			</div>
+		</div>
+
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+			Reveal.initialize({
+				hash: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
+</html>
