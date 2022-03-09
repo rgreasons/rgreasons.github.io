@@ -22,14 +22,26 @@
 				height: auto;
 				width: 60%;
 			}
+			.footers {
+				font-size: 18px;
+				position: absolute;
+				bottom: 10px;
+				right: 10px;
+			}
+			code {
+				font-size: 16px;
+			}
 		</style>
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h3>Clustering and Comparing NBA Players by Defensive Impact</h3>
-					<b>Richard Reasons</b>
+					<section>
+						<h3>Clustering and Comparing NBA Players by Defensive Impact</h3>
+						<b>Richard Reasons</b>
+					</section>
+					<div class = 'footers'><a href='http://www.rgreasons.net/presentations/nba_comps.html'>http://www.rgreasons.net/presentations/nba_comps.html</a></div>
 				</section>
 				<!-- Basketball Stats vertical stack -->
 				<section>
@@ -67,12 +79,12 @@
 					<section>
 						Use official <a href="https://stats.nba.com">NBA Stats website</a>, which is powered by REST APIs
 						<br>
-						<img class = 'images' src="/img/nba_boxout.png" alt="Screenshot of the box out statistics on the NBA's website">
+						<img class = 'r-stretch' src="/img/nba_boxout.png" alt="Screenshot of the box out statistics on the NBA's website">
 					</section>
 					<section>
 						Use browser developer tools to discover REST endpoints
 						<br>
-						<img src="/img/nba_devtools.png" alt="A screenshot of my Chrome window while debugging how to leverage the NBA's backend APIs">
+						<img class = 'r-stretch' src="/img/nba_devtools.png" alt="A screenshot of my Chrome window while debugging how to leverage the NBA's backend APIs">
 					</section>
 					<section>
 						<ul>
@@ -88,12 +100,27 @@
 					<section>
 						Second Step: Data Cleanup & Feature Engineering
 					</section>
-					<section>Flatten multiple seasons to single datapoint</section>
 					<section>
 						<ul>
 							<li>Percentage Calculations</li>
 							<li>Aggregate Totals</li>
 						</ul>
+						<pre>
+							<code>
+			numeric_defense_stats = (numeric_defense_stats_aggs
+				.assign(
+					OPP_FG_PCT_LESS5 = lambda df: df.OPP_FGM_LESS5 / df.OPP_FGA_LESS5,
+					OPP_FG_PCT_5_9 = lambda df: df.OPP_FGM_5_9 / df.OPP_FGA_5_9,
+					...
+					DREB_CHANCE_PCT = lambda df: df.DREB / df.DREB_CHANCES,
+					DREB_CHANCE_PCT_ADJ = lambda df: df.DREB_CHANCE_PCT_ADJ / df.GP,
+					)
+				# coerce zeros and fix divide-by-zeros
+				.fillna(0)
+				.replace(np.inf, 0)
+			)
+							</code>
+						</pre>
 					</section>
 					<section>
 						Add Aggregate Player & Game Information
@@ -104,14 +131,36 @@
 						</ul>
 					</section>
 					<section>
+						<pre>
+							<code class = 'stretch'>
+	overall_stats_pre_index = (overall_stats_raw
+		.assign(PLAYER_ID = lambda df: df.idPlayer.astype(str))
+		.drop('idPlayer', axis='columns')
+		.groupby('PLAYER_ID')
+		.agg({
+			'isB2BFirst': sum,
+			'isB2BSecond': sum,
+			'countDaysRestPlayer': 'mean',
+			'countDaysNextGamePlayer': 'mean',
+			'numberGamePlayerSeason': 'max',
+			'isWin': sum,
+			'minutes': sum,
+			'ast': sum, 'stl': sum, 'blk': sum, 'tov': sum, 'pf': sum, 'plusminus': [sum, 'min', 'max']
+		})
+		.reset_index())
+							</code>
+						</pre>
+					</section>
+					<section>
 						Principal Component Analysis (PCA)
 						<ul>
 							<li>Scale Data</li>
 							<li>PCA w/ 50 components</li>
 						</ul>
+						<img class = 'r-stretch' src="/img/pca_one.png" alt="A screenshot of my notebook after first PCA transformation">
 					</section>
 					<section>
-						Signifcant correlation with playtime<br>
+						Signifcant correlation with playtime - <br>
 						First Principal component accounted for 53% of dataset variance
 					</section>
 					<section>
@@ -121,6 +170,25 @@
 							<li>Use standard "Per 36 Minutes" adjustment</li>
 							<li>Reduced inpact of first principal component from 53% to 11%</li>
 						</ul>
+					</section>
+					<section>
+						<pre>
+							<code>
+			combined_per36 = (combined_stats
+        .assign(per36_factor = lambda df: 36.0 / df.MIN,
+                OPP_FGM_LESS5 = lambda df: df.OPP_FGM_LESS5 * df.per36_factor,
+                OPP_FGA_LESS5 = lambda df: df.OPP_FGA_LESS5 * df.per36_factor,
+                OPP_FGM_5_9 = lambda df: df.OPP_FGM_5_9 * df.per36_factor,
+                ...
+                tov_sum = lambda df: df.tov_sum * df.per36_factor,
+                pf_sum = lambda df: df.pf_sum * df.per36_factor,
+                plusminus_sum = lambda df: df.plusminus_sum * df.per36_factor
+                ))
+							</code>
+						</pre>
+					</section>
+					<section>
+						<img class = 'r-stretch' src="/img/pca_two.png" alt="A screenshot of my notebook after second PCA transformation">
 					</section>
 				</section>
 				<!-- T-SNE & Clustering Stack -->
@@ -158,7 +226,7 @@
 						Sample Comparisons
 					</Section>
 					<section>
-						<p>Lebron James</p>
+						<p>LeBron James</p>
 						<table>
 							<tr><th>Player Name</th><th>Player Cluster</th><th>Rank</th><th>Neighbor Player Name</th><th>% Match</th></tr>
 							<tr><td>LeBron James</td><td>3</td>	<td>1</td><td>Tobias Harris</td><td>0.986453</td></tr>
