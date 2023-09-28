@@ -48,7 +48,7 @@ ul {
   
   .hologram{
     grid-column: main-column / right-gutter;
-    grid-row: hologram / ercheader;
+    grid-row: hologram / holoheader ;
   }
 
   .holoheader {
