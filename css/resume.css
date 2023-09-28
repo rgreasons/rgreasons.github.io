@@ -7,7 +7,7 @@ ul {
   .wrapper {
     display: grid;
     grid-template-columns: [left-gutter] auto [main-column] 100px [skill-break] 600px [right-justify] 200px [right-gutter] auto [end];
-    grid-template-rows: [top-gutter] 40px [header] 60px  [experience] auto [hologram] auto [humana] auto [ercheader] auto [erc] auto [itea1header] auto [itea1] auto [itea2header] auto [itea2] auto [psaheader] auto [psa] auto [edaheader] auto [eda] auto [edainternheader] auto [edaintern] auto [education] auto [gatech] auto [purdue] auto [expertise] auto [skills] auto [visualization] auto [software] auto [bottom-gutter] auto [bottom];
+    grid-template-rows: [top-gutter] 40px [header] 60px  [experience] auto [hologram] auto [holoheader] auto [holo] auto [humana] auto [ercheader] auto [erc] auto [itea1header] auto [itea1] auto [itea2header] auto [itea2] auto [psaheader] auto [psa] auto [edaheader] auto [eda] auto [edainternheader] auto [edaintern] auto [education] auto [gatech] auto [purdue] auto [expertise] auto [skills] auto [visualization] auto [software] auto [bottom-gutter] auto [bottom];
     column-gap: 8px;
     row-gap: 4px;
     font-family:Helvetica, Arial;
@@ -49,6 +49,15 @@ ul {
   .hologram{
     grid-column: main-column / right-gutter;
     grid-row: hologram / ercheader;
+  }
+
+  .holoheader {
+    grid-row: holoheader / holo;
+  }
+  
+  .holo{
+    grid-row: holo / ercheader;
+    grid-column: main-column / right-gutter;
   }
 
   .humana{
