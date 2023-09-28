@@ -43,7 +43,7 @@ ul {
   
   .experience {
     grid-column: main-column / right-gutter;
-    grid-row: experience / humana;
+    grid-row: experience / hologram;
   }
   
   .hologram{
