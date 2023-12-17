@@ -28,6 +28,18 @@ body {
 	margin: 1px;
 }
 
+.flexnav {
+	display: flex;
+	flex-flow: row-wrap;
+	background: black;
+}
+
+.flexnav a {
+	display:block;
+	padding: 1em;
+	color: white;
+}
+
 @media (max-width: 61.9em) {
 	#tagline {
 		text-align: center;
