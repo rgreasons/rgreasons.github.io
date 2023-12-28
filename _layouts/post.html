@@ -22,15 +22,6 @@
       		{{content}}
     		</div>
 	</div>
-		<div class="col-md-3 col-md-offset-1">
-			<p><a href="/blog/tags/">View Blog By Tags</a></p>
-			{% for tag in site.tags %}
-  				{% assign t = tag | first %}
-  				{% assign posts = tag | last %}
-
-				<a class="btn btn-default" href="/blog/tags#{{t | downcase}}">{{ t }}</a>
-			{% endfor %}
-		</div>
   </div>
 
   <footer>
