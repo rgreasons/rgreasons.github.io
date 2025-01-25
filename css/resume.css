@@ -7,7 +7,7 @@ ul {
   .wrapper {
     display: grid;
     grid-template-columns: [left-gutter] auto [main-column] 100px [skill-break] 600px [right-justify] 200px [right-gutter] auto [end];
-    grid-template-rows: [top-gutter] 40px [header] 60px  [experience] auto [tagaspen] auto [tagaspenheader] auto [aspen] auto [hologram] auto [holoheader] auto [holo] auto [humana] auto [ercheader] auto [erc] auto [itea1header] auto [itea2header] auto [psaheader] auto [edaheader] auto [edainternheader] auto [itea1] auto [education] auto [gatech] auto [purdue] auto [expertise] auto [skills] auto [visualization] auto [software] auto [bottom-gutter] auto [bottom];
+    grid-template-rows: [top-gutter] 40px [header] 60px  [experience] auto [tagaspen] auto [tagaspenheader] auto [aspen] auto [hologram] auto [holoheader] auto [holo] auto [humana] auto [ercheader] auto [erc] auto [itea1header] auto [itea1] auto [education] auto [gatech] auto [purdue] auto [expertise] auto [skills] auto [visualization] auto [software] auto [bottom-gutter] auto [bottom];
     column-gap: 8px;
     row-gap: 4px;
     font-family:Helvetica, Arial;
@@ -89,23 +89,7 @@ ul {
   }
   
   .itea1header {
-    grid-row: itea1header / itea2header;
-  }
-  
-  .itea2header {
-    grid-row: itea2header / psaheader;
-  }
-
-  .psaheader {
-    grid-row: psaheader / edaheader;
-  }
-
-  .edaheader {
-    grid-row: edaheader / edainternheader;
-  }
-
-  .edainternheader {
-    grid-row: edainternheader / itea1;
+    grid-row: itea1header / itea1 ;
   }
   
   .itea1 {
