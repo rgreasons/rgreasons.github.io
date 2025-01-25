@@ -6,11 +6,11 @@ tags: books
 
 I'm happy to check back in for a third year running and give some quick reviews of the professional development books I read over the past year.
 
+<!--excerpt-->
+
 When I sat down to write this post, I was pretty sure this was going to be rather short. I didn't think I had read a book a quarter that really fit the bill for what I would consider "professional development." This year, I took my foot off the gas pedal. I accomplished a lot - completed my master's degree and ran my first marathon - and often felt like coming home and kicking back instead of reading a few chapters of a business book and going the extra 10 percent. I was able to round up four books, even if a few toe the line of what folks may consider "professional development." 
 
 Frankly, I'm feeling less inspired to read about some of these topics than I was a few years ago after realizing that many texts aimed at individuals or individual contributors seem to reference the same influential texts. What's the point of reading another book about optimization when it's just going to continue citing Danny Kahneman and Anders Ericsson? I anticipate next year's list containing a bunch of books where the focus is not just a human at a desk but the factors outside that desk (the modern workplace, macroeconomics) or what one does before and after they take a seat in their Aeron every morning. As always, I'm eager for suggestions, so don't hestitate to send them my way!
-
-<!--excerpt-->
 
 ## _[Measure What Matters](https://www.whatmatters.com/the-book)_ by John Doerr
 
