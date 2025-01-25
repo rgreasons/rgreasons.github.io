@@ -7,7 +7,7 @@ ul {
   .wrapper {
     display: grid;
     grid-template-columns: [left-gutter] auto [main-column] 100px [skill-break] 600px [right-justify] 200px [right-gutter] auto [end];
-    grid-template-rows: [top-gutter] 40px [header] 60px  [experience] auto [hologram] auto [holoheader] auto [holo] auto [humana] auto [ercheader] auto [erc] auto [itea1header] auto [itea1] auto [itea2header] auto [itea2] auto [psaheader] auto [psa] auto [edaheader] auto [eda] auto [edainternheader] auto [edaintern] auto [education] auto [gatech] auto [purdue] auto [expertise] auto [skills] auto [visualization] auto [software] auto [bottom-gutter] auto [bottom];
+    grid-template-rows: [top-gutter] 40px [header] 60px  [experience] auto [tagaspen] auto [tagaspenheader] auto [aspen] auto [hologram] auto [holoheader] auto [holo] auto [humana] auto [ercheader] auto [erc] auto [itea1header] auto [itea2header] auto [psaheader] auto [edaheader] auto [edainternheader] auto [itea1] auto [education] auto [gatech] auto [purdue] auto [expertise] auto [skills] auto [visualization] auto [software] auto [bottom-gutter] auto [bottom];
     column-gap: 8px;
     row-gap: 4px;
     font-family:Helvetica, Arial;
@@ -43,10 +43,24 @@ ul {
   
   .experience {
     grid-column: main-column / right-gutter;
-    grid-row: experience / hologram;
+    grid-row: experience / tagaspen;
   }
   
-  .hologram{
+  .tagaspen {
+    grid-column: main-column / right-gutter;
+    grid-row: tagaspen / tagaspenheader;
+  }
+
+  .tagaspenheader {
+    grid-row: tagaspenheader / aspen;
+  }
+  
+  .aspen {
+    grid-row: aspen / hologram;
+    grid-column: main-column / right-gutter;
+  }
+
+  .hologram {
     grid-column: main-column / right-gutter;
     grid-row: hologram / holoheader ;
   }
@@ -55,12 +69,12 @@ ul {
     grid-row: holoheader / holo;
   }
   
-  .holo{
+  .holo {
     grid-row: holo / humana ;
     grid-column: main-column / right-gutter;
   }
 
-  .humana{
+  .humana {
     grid-column: main-column / right-gutter;
     grid-row: humana / ercheader;
   }
@@ -69,53 +83,33 @@ ul {
     grid-row: ercheader / erc;
   }
   
-  .erc{
+  .erc {
     grid-row: erc / itea1header;
     grid-column: main-column / right-gutter;
   }
   
   .itea1header {
-    grid-row: itea1header / itea1;
-  }
-  
-  .itea1 {
-    grid-row: itea1 / itea2header;
-    grid-column: main-column / right-gutter;
+    grid-row: itea1header / itea2header;
   }
   
   .itea2header {
-    grid-row: itea2header / itea2;
+    grid-row: itea2header / psaheader;
   }
-  
-  .itea2 {
-    grid-row: itea2 / psaheader;
-    grid-column: main-column / right-gutter;
-  }
-  
+
   .psaheader {
-    grid-row: psaheader / psa;
+    grid-row: psaheader / edaheader;
   }
-  
-  .psa {
-    grid-row: psa / edaheader;
-    grid-column: main-column / right-gutter;
-  }
-  
+
   .edaheader {
-    grid-row: edaheader / eda;
+    grid-row: edaheader / edainternheader;
   }
-  
-  .eda {
-    grid-row: eda / edainternheader;
-    grid-column: main-column / right-gutter;
-  }
-  
+
   .edainternheader {
-    grid-row: edainternheader / edaintern;
+    grid-row: edainternheader / itea1;
   }
   
-  .edaintern {
-    grid-row: edaintern / education;
+  .itea1 {
+    grid-row: itea1 / education;
     grid-column: main-column / right-gutter;
   }
   
